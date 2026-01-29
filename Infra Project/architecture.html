@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Cloud Nexus Infrastructure Architecture - See how our enterprise-grade infrastructure delivers reliability and performance">
+    <title>Architecture - Cloud Nexus IaaS</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="bg-animation-container">
+        <div id="neural-canvas"></div>
+        <div class="bg-orb orb-1"></div>
+        <div class="bg-orb orb-2"></div>
+        <div class="bg-orb orb-3"></div>
+    </div>
+
+    <!-- ============================================
+         NAVIGATION BAR
+         ============================================ -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5BA4FC"
+                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M25 65 H75 C85 65 92 58 92 48 C92 38 85 31 75 31 C73 31 71 31.5 69 32.5 C65 20 54 12 42 12 C28 12 16 22 16 35 C16 36 16.2 37.5 16.5 39 C9 41 4 48 4 56 C4 64 10 70 18 70 H25" />
+                        <line x1="38" y1="70" x2="38" y2="45" opacity="0.8" />
+                        <line x1="50" y1="70" x2="50" y2="35" />
+                        <line x1="62" y1="70" x2="62" y2="45" opacity="0.8" />
+                        <circle cx="38" cy="45" r="3" fill="#5BA4FC" stroke="none" />
+                        <circle cx="50" cy="35" r="3" fill="#5BA4FC" stroke="none" />
+                        <circle cx="62" cy="45" r="3" fill="#5BA4FC" stroke="none" />
+                    </svg>
+                </div>
+                <div class="logo-text-wrapper">
+                    <span class="logo-main">Cloud Nexus</span>
+                    <span class="logo-sub">Enterprise</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="architecture.html">Architecture</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="stats.html">Stats</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <span class="theme-icon" id="theme-icon">🌙</span>
+                <span id="theme-text">Dark</span>
+            </button>
+            <div class="nav-auth">
+                <a href="#" class="btn-auth btn-login">Log In</a>
+                <a href="#" class="btn-auth btn-register">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         ARCHITECTURE VISUALIZATION
+         ============================================ -->
+    <section class="section architecture" id="architecture"
+        style="padding-top: 120px; min-height: 80vh; position: relative; overflow: visible;">
+        <!-- Background Elements -->
+        <div class="mesh-blob mesh-blob-2" style="top: 10%; left: -5%; opacity: 0.3;"></div>
+
+        <div class="section-header fade-in">
+            <h2 class="section-title">Infrastructure <span class="glow-text">Architecture</span></h2>
+            <p class="section-subtitle">
+                A visual breakdown of how our enterprise-grade infrastructure ensures reliability, security, and
+                performance.
+            </p>
+        </div>
+
+        <div class="architecture-diagram"
+            style="position: relative; max-width: 1000px; margin: 4rem auto; min-height: 500px; background: var(--glass-bg); border-radius: 2rem; border: 1px solid var(--glass-border); padding: 3rem;">
+
+            <!-- Connection Lines (SVG Overlay) -->
+            <svg
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;">
+                <defs>
+                    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color: var(--color-primary); stop-opacity: 0.2" />
+                        <stop offset="50%" style="stop-color: var(--color-accent); stop-opacity: 0.8" />
+                        <stop offset="100%" style="stop-color: var(--color-secondary); stop-opacity: 0.2" />
+                    </linearGradient>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="var(--color-accent)" />
+                    </marker>
+                </defs>
+                <!-- These paths would ideally be calculated or positioned to match nodes, simplified for now -->
+                <path d="M 500 80 L 500 150" stroke="url(#lineGradient)" stroke-width="2" fill="none"
+                    stroke-dasharray="10 5" class="flow-line" />
+                <path d="M 500 230 L 300 350" stroke="url(#lineGradient)" stroke-width="2" fill="none"
+                    stroke-dasharray="10 5" class="flow-line" />
+                <path d="M 500 230 L 700 350" stroke="url(#lineGradient)" stroke-width="2" fill="none"
+                    stroke-dasharray="10 5" class="flow-line" />
+                <path d="M 300 430 L 300 450" stroke="url(#lineGradient)" stroke-width="2" fill="none"
+                    stroke-dasharray="10 5" class="flow-line" />
+                <path d="M 700 430 L 700 450" stroke="url(#lineGradient)" stroke-width="2" fill="none"
+                    stroke-dasharray="10 5" class="flow-line" />
+            </svg>
+
+            <!-- Architecture Nodes -->
+            <div
+                style="display: flex; flex-direction: column; align-items: center; gap: 4rem; position: relative; z-index: 1;">
+
+                <!-- Level 1: Users -->
+                <div class="arch-node scale-in elite-card" style="padding: 1.5rem 3rem; text-align: center;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🌍</div>
+                    <h4 style="margin: 0;">Global Traffic</h4>
+                    <span style="font-size: 0.8rem; opacity: 0.7;">DNS / CDN Layer</span>
+                </div>
+
+                <!-- Level 2: Load Balancer -->
+                <div class="arch-node scale-in elite-card"
+                    style="padding: 1.5rem 3rem; text-align: center; border-color: var(--color-accent);">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">⚖️</div>
+                    <h4 style="margin: 0;">Load Balancers</h4>
+                    <span style="font-size: 0.8rem; opacity: 0.7;">Layer 7 / SSL Termination</span>
+                </div>
+
+                <!-- Level 3: Compute & Storage -->
+                <div style="display: flex; gap: 4rem; width: 100%; justify-content: center;">
+                    <!-- Compute Cluster -->
+                    <div class="arch-node scale-in elite-card" style="padding: 2rem; text-align: center; width: 250px;">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">💻</div>
+                        <h4 style="margin: 0;">Compute Cluster</h4>
+                        <span style="font-size: 0.8rem; opacity: 0.7;">Auto-Scaling Group</span>
+                        <div style="margin-top: 1rem; display: flex; gap: 0.5rem; justify-content: center;">
+                            <span
+                                style="width: 8px; height: 8px; background: #10B981; border-radius: 50%; box-shadow: 0 0 10px #10B981;"></span>
+                            <span
+                                style="width: 8px; height: 8px; background: #10B981; border-radius: 50%; box-shadow: 0 0 10px #10B981;"></span>
+                            <span
+                                style="width: 8px; height: 8px; background: #10B981; border-radius: 50%; box-shadow: 0 0 10px #10B981;"></span>
+                        </div>
+                    </div>
+
+                    <!-- Database Cluster -->
+                    <div class="arch-node scale-in elite-card" style="padding: 2rem; text-align: center; width: 250px;">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">💾</div>
+                        <h4 style="margin: 0;">Data Layer</h4>
+                        <span style="font-size: 0.8rem; opacity: 0.7;">Primary + Replica DBs</span>
+                        <div style="margin-top: 1rem; display: flex; gap: 0.5rem; justify-content: center;">
+                            <span
+                                style="width: 8px; height: 8px; background: #3B82F6; border-radius: 50%; box-shadow: 0 0 10px #3B82F6;"></span>
+                            <span
+                                style="width: 8px; height: 8px; background: #3B82F6; border-radius: 50%; box-shadow: 0 0 10px #3B82F6;"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Level 4: Bottom Services -->
+                <div style="display: flex; gap: 4rem; width: 100%; justify-content: center; opacity: 0.8;">
+                    <div class="arch-badge"
+                        style="background: rgba(255,255,255,0.1); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">
+                        🔄 Auto-Backup
+                    </div>
+                    <div class="arch-badge"
+                        style="background: rgba(255,255,255,0.1); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">
+                        🛡️ WAF Protection
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <style>
+            .flow-line {
+                animation: dash 30s linear infinite;
+            }
+
+            @keyframes dash {
+                to {
+                    stroke-dashoffset: -1000;
+                }
+            }
+        </style>
+
+        <!-- NEW SECTION: Global Infrastructure Map (Control Center) -->
+        <div class="section-container" style="max-width: 1400px; margin: 8rem auto; padding: 0 2rem;">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Global <span class="glow-text">Control Center</span></h2>
+                <p class="section-subtitle">Real-time telemetry from our hyper-connected intelligent edge network.</p>
+            </div>
+
+            <!-- Control Center UI -->
+            <div class="elite-card control-center-panel fade-in">
+
+                <!-- Main Map Container -->
+                <div class="map-visualization">
+                    <svg viewBox="0 0 1000 500" class="world-map-svg">
+                        <defs>
+                            <filter id="glow-map" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
+                            <linearGradient id="path-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="var(--color-primary)" stop-opacity="0" />
+                                <stop offset="50%" stop-color="var(--color-primary)" stop-opacity="1" />
+                                <stop offset="100%" stop-color="var(--color-primary)" stop-opacity="0" />
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Grid Background -->
+                        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="var(--text-tertiary)" stroke-width="0.5"
+                                stroke-opacity="0.2" />
+                        </pattern>
+                        <rect width="100%" height="100%" fill="url(#grid)" />
+
+                        <!-- Simplified World Map (Dot/Tech Style) -->
+                        <g class="map-continents" fill="var(--bg-tertiary)" stroke="var(--glass-border)"
+                            stroke-width="1">
+                            <!-- North America -->
+                            <path d="M 150 100 L 250 80 L 300 120 L 280 200 L 200 180 L 120 150 Z" opacity="0.5" />
+                            <!-- South America -->
+                            <path d="M 280 220 L 350 240 L 320 380 L 260 300 Z" opacity="0.5" />
+                            <!-- Europe -->
+                            <path d="M 450 100 L 550 90 L 520 160 L 440 150 Z" opacity="0.5" />
+                            <!-- Africa -->
+                            <path d="M 450 180 L 550 180 L 580 300 L 500 350 L 420 250 Z" opacity="0.5" />
+                            <!-- Asia -->
+                            <path d="M 580 80 L 750 80 L 800 150 L 700 250 L 600 180 Z" opacity="0.5" />
+                            <!-- Australia -->
+                            <path d="M 750 300 L 850 300 L 840 380 L 740 360 Z" opacity="0.5" />
+                        </g>
+
+                        <!-- Data Flow Paths -->
+                        <g class="data-paths">
+                            <!-- NA to EU -->
+                            <path d="M 250 130 Q 350 50 500 120" stroke="url(#path-gradient)" stroke-width="2"
+                                fill="none" class="flow-path-bg" />
+                            <circle r="3" fill="#fff" class="flow-particle">
+                                <animateMotion dur="3s" repeatCount="indefinite" path="M 250 130 Q 350 50 500 120" />
+                            </circle>
+
+                            <!-- EU to Asia -->
+                            <path d="M 500 120 Q 600 150 700 150" stroke="url(#path-gradient)" stroke-width="2"
+                                fill="none" class="flow-path-bg" />
+                            <circle r="3" fill="#fff" class="flow-particle">
+                                <animateMotion dur="2.5s" repeatCount="indefinite" path="M 500 120 Q 600 150 700 150" />
+                            </circle>
+
+                            <!-- Asia to AU -->
+                            <path d="M 700 150 Q 750 250 800 320" stroke="url(#path-gradient)" stroke-width="2"
+                                fill="none" class="flow-path-bg" />
+                            <circle r="3" fill="#fff" class="flow-particle">
+                                <animateMotion dur="4s" repeatCount="indefinite" path="M 700 150 Q 750 250 800 320" />
+                            </circle>
+
+                            <!-- NA to SA -->
+                            <path d="M 250 130 Q 200 200 300 280" stroke="url(#path-gradient)" stroke-width="2"
+                                fill="none" class="flow-path-bg" />
+                            <circle r="3" fill="#fff" class="flow-particle">
+                                <animateMotion dur="3.5s" repeatCount="indefinite" path="M 250 130 Q 200 200 300 280" />
+                            </circle>
+                        </g>
+
+                        <!-- Region Nodes (Interactive) -->
+                        <g class="map-nodes">
+                            <!-- Node 1: Virginia -->
+                            <g class="node-group" transform="translate(250, 130)">
+                                <circle r="20" fill="var(--color-primary)" opacity="0.2" class="pulse-ring" />
+                                <circle r="10" fill="var(--glass-bg)" stroke="var(--color-primary)" stroke-width="2" />
+                                <text y="-25" text-anchor="middle" fill="var(--text-primary)" font-size="12"
+                                    font-weight="bold">US-EAST-1</text>
+                            </g>
+                            <!-- Node 2: Frankfurt -->
+                            <g class="node-group" transform="translate(500, 120)">
+                                <circle r="20" fill="var(--color-primary)" opacity="0.2" class="pulse-ring"
+                                    style="animation-delay: 0.5s" />
+                                <circle r="10" fill="var(--glass-bg)" stroke="var(--color-primary)" stroke-width="2" />
+                                <text y="-25" text-anchor="middle" fill="var(--text-primary)" font-size="12"
+                                    font-weight="bold">EU-CENTRAL</text>
+                            </g>
+                            <!-- Node 3: Tokyo -->
+                            <g class="node-group" transform="translate(700, 150)">
+                                <circle r="20" fill="var(--color-primary)" opacity="0.2" class="pulse-ring"
+                                    style="animation-delay: 1s" />
+                                <circle r="10" fill="var(--glass-bg)" stroke="var(--color-primary)" stroke-width="2" />
+                                <text y="-25" text-anchor="middle" fill="var(--text-primary)" font-size="12"
+                                    font-weight="bold">AP-NORTHEAST</text>
+                            </g>
+                            <!-- Node 4: Sydney -->
+                            <g class="node-group" transform="translate(800, 320)">
+                                <circle r="20" fill="var(--color-primary)" opacity="0.2" class="pulse-ring"
+                                    style="animation-delay: 1.5s" />
+                                <circle r="10" fill="var(--glass-bg)" stroke="var(--color-primary)" stroke-width="2" />
+                                <text y="-25" text-anchor="middle" fill="var(--text-primary)" font-size="12"
+                                    font-weight="bold">AP-SOUTHEAST</text>
+                            </g>
+                            <!-- Node 5: Sao Paulo -->
+                            <g class="node-group" transform="translate(300, 280)">
+                                <circle r="20" fill="var(--color-primary)" opacity="0.2" class="pulse-ring"
+                                    style="animation-delay: 2s" />
+                                <circle r="10" fill="var(--glass-bg)" stroke="var(--color-primary)" stroke-width="2" />
+                                <text y="-25" text-anchor="middle" fill="var(--text-primary)" font-size="12"
+                                    font-weight="bold">SA-EAST</text>
+                            </g>
+                        </g>
+                    </svg>
+
+                    <!-- HUD Overlay -->
+                    <div class="hud-panel left-hud">
+                        <div class="hud-item">
+                            <span class="hud-label">LIVE THROUGHPUT</span>
+                            <span class="hud-value neon-green">42.8 TB/s</span>
+                        </div>
+                        <div class="hud-item">
+                            <span class="hud-label">ACTIVE NODES</span>
+                            <span class="hud-value">154/154</span>
+                        </div>
+                    </div>
+
+                    <div class="hud-panel right-hud">
+                        <div class="hud-item">
+                            <span class="hud-label">GLOBAL LATENCY</span>
+                            <span class="hud-value neon-blue">~12ms</span>
+                        </div>
+                        <div class="hud-item">
+                            <div class="status-indicator">
+                                <div class="status-dot"></div>
+                                <span>ALL SYSTEMS OPERATIONAL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Ticker -->
+                <div class="tech-ticker">
+                    <div class="ticker-content">
+                        <span>REGION: US-EAST-1 [OPTIMAL]</span>
+                        <span>REGION: EU-WEST-2 [OPTIMAL]</span>
+                        <span>REGION: AP-SOUTH-1 [SCALING UP]</span>
+                        <span>REGION: SA-EAST-1 [OPTIMAL]</span>
+                        <span>TRAFFIC: 45% CAPACITY</span>
+                        <span>DDOS SHIELD: ACTIVE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEW SECTION: Resiliency Engine -->
+        <div class="section-container" style="max-width: 1400px; margin: 8rem auto; padding: 0 2rem;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div class="fade-in">
+                    <h2 class="section-title" style="text-align: left;">Resiliency <span
+                            class="glow-text">Engineered</span></h2>
+                    <p style="margin-top: 1.5rem; font-size: 1.1rem; line-height: 1.8; opacity: 0.8;">
+                        Our architecture is built on the principle of "Assume Failure." Every component is duplicated
+                        across independent failure domains.
+                    </p>
+
+                    <div class="resiliency-stats-grid">
+                        <div class="stat-gauge">
+                            <svg viewBox="0 0 100 60" width="120" height="72">
+                                <path d="M 10 50 A 40 40 0 1 1 90 50" fill="none" stroke="rgba(255,255,255,0.1)"
+                                    stroke-width="8" stroke-linecap="round" />
+                                <path d="M 10 50 A 40 40 0 1 1 90 50" fill="none" stroke="var(--color-primary)"
+                                    stroke-width="8" stroke-linecap="round" stroke-dasharray="126"
+                                    stroke-dashoffset="10" />
+                                <text x="50" y="45" text-anchor="middle" fill="white" font-weight="bold"
+                                    font-size="14">99.99%</text>
+                                <text x="50" y="58" text-anchor="middle" fill="var(--text-tertiary)" font-size="8">SLA
+                                    UPTIME</text>
+                            </svg>
+                        </div>
+                        <div class="stat-gauge">
+                            <svg viewBox="0 0 100 60" width="120" height="72">
+                                <path d="M 10 50 A 40 40 0 1 1 90 50" fill="none" stroke="rgba(255,255,255,0.1)"
+                                    stroke-width="8" stroke-linecap="round" />
+                                <path d="M 10 50 A 40 40 0 1 1 90 50" fill="none" stroke="#10b981" stroke-width="8"
+                                    stroke-linecap="round" stroke-dasharray="126" stroke-dashoffset="0" />
+                                <text x="50" y="45" text-anchor="middle" fill="white" font-weight="bold"
+                                    font-size="14">0ms</text>
+                                <text x="50" y="58" text-anchor="middle" fill="var(--text-tertiary)" font-size="8">DATA
+                                    LOSS</text>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 3rem;">
+                        <h4
+                            style="margin-bottom: 1rem; color: var(--text-secondary); font-family: 'JetBrains Mono'; font-size: 0.9rem;">
+                            FAILOVER PROTOCOLS</h4>
+                        <div class="protocol-list">
+                            <div class="protocol-item">
+                                <div class="protocol-led"></div>
+                                <span>Global DNS Re-Routing (< 200ms)</span>
+                            </div>
+                            <div class="protocol-item">
+                                <div class="protocol-led"></div>
+                                <span>Active-Active Database Mirroring</span>
+                            </div>
+                            <div class="protocol-item">
+                                <div class="protocol-led"></div>
+                                <span>Automated Instance Regeneration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="elite-card fade-in blueprint-card"
+                    style="padding: 0; overflow: hidden; position: relative;">
+                    <!-- Blueprint Grid Background -->
+                    <div class="blueprint-grid"></div>
+
+                    <div style="padding: 3rem; position: relative; z-index: 2;">
+                        <h4
+                            style="margin-bottom: 2rem; color: var(--color-primary); display: flex; justify-content: space-between; align-items: center;">
+                            FAILOVER WORKFLOW
+                            <span
+                                style="font-size: 0.7rem; color: var(--text-tertiary); border: 1px solid var(--glass-border); padding: 2px 6px; border-radius: 4px;">AUTOMATED</span>
+                        </h4>
+
+                        <div class="workflow-steps">
+                            <div class="wf-step">
+                                <div class="wf-icon alert">!</div>
+                                <div class="wf-content">
+                                    <h5>Detection</h5>
+                                    <p>Health sensors detect >50ms latency spike.</p>
+                                </div>
+                            </div>
+                            <div class="wf-connector"></div>
+                            <div class="wf-step">
+                                <div class="wf-icon action">⚡</div>
+                                <div class="wf-content">
+                                    <h5>Routing Shift</h5>
+                                    <p>Anycast DNS shifts traffic to backup region.</p>
+                                </div>
+                            </div>
+                            <div class="wf-connector"></div>
+                            <div class="wf-step">
+                                <div class="wf-icon success">✓</div>
+                                <div class="wf-content">
+                                    <h5>Recovery</h5>
+                                    <p>Services restored. Zero packet loss.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESTORED SECTION: 3-Layer Security Model -->
+        <div class="section-container" style="max-width: 1400px; margin: 8rem auto; padding: 0 2rem;">
+            <div class="section-header fade-in" style="margin-bottom: 4rem;">
+                <h2 class="section-title">Defense in <span class="glow-text">Depth</span></h2>
+                <p class="section-subtitle">Security isn't a feature. It's the foundation.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="elite-card fade-in" style="border-left: 4px solid var(--color-primary);">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">🛡️ Edge Layer</div>
+                    <ul style="list-style: none; opacity: 0.8;">
+                        <li style="margin-bottom: 0.5rem;">• Global ANYCAST DDoS Protection</li>
+                        <li style="margin-bottom: 0.5rem;">• Web Application Firewall (WAF)</li>
+                    </ul>
+                </div>
+                <div class="elite-card fade-in"
+                    style="border-left: 4px solid var(--color-accent); transition-delay: 0.2s;">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">🔐 Application Layer</div>
+                    <ul style="list-style: none; opacity: 0.8;">
+                        <li style="margin-bottom: 0.5rem;">• Zero-Trust Identity (mTLS)</li>
+                        <li style="margin-bottom: 0.5rem;">• Container Isolation (gVisor)</li>
+                    </ul>
+                </div>
+                <div class="elite-card fade-in"
+                    style="border-left: 4px solid var(--color-secondary); transition-delay: 0.4s;">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">💿 Data Layer</div>
+                    <ul style="list-style: none; opacity: 0.8;">
+                        <li style="margin-bottom: 0.5rem;">• AES-256 Encryption at Rest</li>
+                        <li style="margin-bottom: 0.5rem;">• Immutable Backups</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESTORED SECTION: Tech Deep Dive (Custom Elite Accordion) -->
+        <div class="under-the-hood-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Under the <span class="glow-text">Hood</span></h2>
+                <p class="section-subtitle">Deep dive into the core technologies powering our high-performance
+                    infrastructure.</p>
+            </div>
+
+            <div class="tech-accordion">
+                <div class="accordion-item fade-in">
+                    <button class="accordion-trigger" onclick="this.parentElement.classList.toggle('active')">
+                        <div class="trigger-title"><span class="trigger-icon">+</span>Custom Hypervisor Technology</div>
+                        <div class="trigger-badge"
+                            style="font-size: 0.8rem; background:rgba(59, 130, 246, 0.1); padding: 0.4rem 0.8rem; border-radius: 20px; color: var(--color-primary); font-weight: 600;">
+                            Rust-Powered</div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <div class="content-body">
+                                <div class="content-text">
+                                    <p>Our custom-built hypervisor reduces overhead by 40% compared to traditional
+                                        virtualization, offering bare-metal performance with VM flexibility.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item fade-in" style="transition-delay: 0.1s;">
+                    <button class="accordion-trigger" onclick="this.parentElement.classList.toggle('active')">
+                        <div class="trigger-title"><span class="trigger-icon">+</span>NVMe-over-Fabric Storage</div>
+                        <div class="trigger-badge"
+                            style="font-size: 0.8rem; background:rgba(16, 185, 129, 0.1); padding: 0.4rem 0.8rem; border-radius: 20px; color: #10b981; font-weight: 600;">
+                            Sub-ms Latency</div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <div class="content-body">
+                                <div class="content-text">
+                                    <p>Disaggregated storage architecture using NVMe-oF ensures your IOPS scale linearly
+                                        with capacity, eliminating the "noisy neighbor" effect entirely.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item fade-in" style="transition-delay: 0.2s;">
+                    <button class="accordion-trigger" onclick="this.parentElement.classList.toggle('active')">
+                        <div class="trigger-title"><span class="trigger-icon">+</span>AI-Driven Traffic Optimization
+                        </div>
+                        <div class="trigger-badge"
+                            style="font-size: 0.8rem; background:rgba(245, 158, 11, 0.1); padding: 0.4rem 0.8rem; border-radius: 20px; color: #f59e0b; font-weight: 600;">
+                            Self-Healing</div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <div class="content-body">
+                                <div class="content-text">
+                                    <p>Our proprietary AI model predicts congestion spikes 30 seconds before they occur,
+                                        automatically re-routing packets through uncongested dark fiber paths.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .region-marker {
+                width: 12px;
+                height: 12px;
+                background: var(--color-primary);
+                border-radius: 50%;
+                cursor: pointer;
+            }
+
+            .region-marker::after {
+                content: attr(data-label);
+                position: absolute;
+                top: -25px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: var(--glass-bg);
+                padding: 4px 12px;
+                border-radius: 20px;
+                font-size: 0.75rem;
+                white-space: nowrap;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                pointer-events: none;
+                border: 1px solid var(--glass-border);
+            }
+
+            .region-marker:hover::after {
+                opacity: 1;
+            }
+
+            .pulsing {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+                animation: pulse 2s infinite;
+            }
+
+            @keyframes pulse {
+                0% {
+                    transform: scale(0.95);
+                    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+                }
+
+                70% {
+                    transform: scale(1);
+                    box-shadow: 0 0 0 15px rgba(59, 130, 246, 0);
+                }
+
+                100% {
+                    transform: scale(0.95);
+                    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+                }
+            }
+
+            @media (max-width: 900px) {
+                .section-container>div {
+                    grid-template-columns: 1fr !important;
+                }
+            }
+        </style>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Cloud Nexus</h4>
+                <p>Enterprise-grade cloud infrastructure built for scale, security, and reliability.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                    <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                    <a href="#" class="social-link" aria-label="GitHub">💻</a>
+                    <a href="#" class="social-link" aria-label="YouTube">📺</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Products</h4>
+                <a href="services.html">Compute</a>
+                <a href="services.html">Storage</a>
+                <a href="services.html">Networking</a>
+                <a href="services.html">Load Balancing</a>
+                <a href="services.html">Auto-Scaling</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Company</h4>
+                <a href="#about">About Us</a>
+                <a href="#careers">Careers</a>
+                <a href="#blog">Blog</a>
+                <a href="#press">Press</a>
+                <a href="#partners">Partners</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Security & Compliance</h4>
+                <a href="#security">Security Overview</a>
+                <a href="#compliance">Compliance</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#sla">SLA</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Support</h4>
+                <a href="#docs">Documentation</a>
+                <a href="#api">API Reference</a>
+                <a href="#support">Support Center</a>
+                <a href="#status">System Status</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Cloud Nexus IaaS. All rights reserved. Built with enterprise excellence.</p>
+        </div>
+    </footer>
+
+    <!-- Authentication Modal Overlay -->
+    <div class="auth-overlay" id="auth-overlay">
+        <div class="auth-modal">
+            <!-- Left Side: Cloud Visuals -->
+            <div class="auth-visual-side">
+                <div class="auth-visual-content">
+                    <div class="auth-visual-logo">
+                        <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5BA4FC"
+                            stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M25 65 H75 C85 65 92 58 92 48 C92 38 85 31 75 31 C73 31 71 31.5 69 32.5 C65 20 54 12 42 12 C28 12 16 22 16 35 C16 36 16.2 37.5 16.5 39 C9 41 4 48 4 56 C4 64 10 70 18 70 H25" />
+                        </svg>
+                        <span class="logo-text">Cloud<span class="glow-text">Nexus</span></span>
+                    </div>
+
+                    <div class="auth-visual-features">
+                        <div class="auth-feature-pill">
+                            <div class="icon">⚡</div>
+                            <div>
+                                <h4>99.99% Uptime</h4>
+                                <p>Enterprise-grade reliability guaranteed.</p>
+                            </div>
+                        </div>
+                        <div class="auth-feature-pill">
+                            <div class="icon">🌍</div>
+                            <div>
+                                <h4>Global Network</h4>
+                                <p>Access 25+ regions instantly.</p>
+                            </div>
+                        </div>
+                        <div class="auth-feature-pill">
+                            <div class="icon">🔐</div>
+                            <div>
+                                <h4>Quantum-Safe</h4>
+                                <p>Next-gen encryption standard.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Forms -->
+            <div class="auth-form-side">
+                <button class="auth-close" aria-label="Close modal">&times;</button>
+                <div class="auth-tabs">
+                    <div class="auth-tab active" data-view="login">Log In</div>
+                    <div class="auth-tab" data-view="register">Sign Up</div>
+                </div>
+
+                <!-- Login Form -->
+                <form class="auth-form active" id="login-form">
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="admin@enterprise.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="auth-submit">Access Console</button>
+                    <div class="auth-footer">
+                        Don't have an account? <a href="#" id="trigger-register">Create account</a>
+                    </div>
+                </form>
+
+                <!-- Register Form -->
+                <form class="auth-form" id="register-form">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Work Email</label>
+                        <input type="email" placeholder="name@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Create Password</label>
+                        <input type="password" placeholder="Min. 8 characters" required>
+                    </div>
+                    <button type="submit" class="auth-submit">Start Free Trial</button>
+                    <div class="auth-footer">
+                        Already using Cloud Nexus? <a href="#" id="trigger-login">Log In</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         JAVASCRIPT FILES
+         ============================================ -->
+    <script src="js/theme.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/counters.js"></script>
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>

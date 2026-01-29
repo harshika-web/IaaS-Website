@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Cloud Nexus IaaS Services - Compute, Storage, Networking, Load Balancing, Auto-Scaling, and Disaster Recovery">
+    <title>Services - Cloud Nexus IaaS</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="bg-animation-container">
+        <div id="neural-canvas"></div>
+        <div class="bg-orb orb-1"></div>
+        <div class="bg-orb orb-2"></div>
+        <div class="bg-orb orb-3"></div>
+    </div>
+
+    <!-- ============================================
+         NAVIGATION BAR
+         ============================================ -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5BA4FC"
+                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M25 65 H75 C85 65 92 58 92 48 C92 38 85 31 75 31 C73 31 71 31.5 69 32.5 C65 20 54 12 42 12 C28 12 16 22 16 35 C16 36 16.2 37.5 16.5 39 C9 41 4 48 4 56 C4 64 10 70 18 70 H25" />
+                        <line x1="38" y1="70" x2="38" y2="45" opacity="0.8" />
+                        <line x1="50" y1="70" x2="50" y2="35" />
+                        <line x1="62" y1="70" x2="62" y2="45" opacity="0.8" />
+                        <circle cx="38" cy="45" r="3" fill="#5BA4FC" stroke="none" />
+                        <circle cx="50" cy="35" r="3" fill="#5BA4FC" stroke="none" />
+                        <circle cx="62" cy="45" r="3" fill="#5BA4FC" stroke="none" />
+                    </svg>
+                </div>
+                <div class="logo-text-wrapper">
+                    <span class="logo-main">Cloud Nexus</span>
+                    <span class="logo-sub">Enterprise</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="architecture.html">Architecture</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="stats.html">Stats</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <span class="theme-icon" id="theme-icon">🌙</span>
+                <span id="theme-text">Dark</span>
+            </button>
+            <div class="nav-auth">
+                <a href="#" class="btn-auth btn-login">Log In</a>
+                <a href="#" class="btn-auth btn-register">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         SERVICES SECTION
+         ============================================ -->
+    <section class="section" id="services" style="padding-top: 140px; position: relative;">
+        <!-- Background Elements -->
+        <div class="mesh-blob mesh-blob-3" style="top: 20%; right: -10%; opacity: 0.4;"></div>
+
+        <div class="section-header fade-in">
+            <h2 class="section-title">Our <span class="glow-text">Services</span></h2>
+            <p class="section-subtitle">
+                Comprehensive cloud infrastructure solutions designed for enterprise needs, built for massive scale and
+                reliability.
+            </p>
+        </div>
+
+        <div class="services-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; padding: 0 2rem; max-width: 1400px; margin: 0 auto;">
+            <div class="elite-card fade-in service-card-compute" style="transition-delay: 0.1s;">
+                <div class="service-icon"
+                    style="font-size: 3rem; margin-bottom: 1.5rem; background: var(--gradient-primary); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                    💻</div>
+                <h3 style="margin-bottom: 1rem;">Compute Engine</h3>
+                <p>High-performance virtual machines with customizable configurations. Scale instantly to meet your
+                    workload demands with our next-gen hypervisor technology.</p>
+            </div>
+
+            <div class="elite-card fade-in service-card-storage" style="transition-delay: 0.2s;">
+                <div class="service-icon"
+                    style="font-size: 3rem; margin-bottom: 1.5rem; background: var(--gradient-secondary); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                    💾</div>
+                <h3 style="margin-bottom: 1rem;">Elastic Storage</h3>
+                <p>Enterprise-grade storage solutions with 99.999999999% durability. Your data is encrypted at rest and
+                    in transit, available whenever you need it.</p>
+            </div>
+
+            <div class="elite-card fade-in service-card-vpc" style="transition-delay: 0.3s;">
+                <div class="service-icon"
+                    style="font-size: 3rem; margin-bottom: 1.5rem; background: var(--gradient-primary); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                    🌐</div>
+                <h3 style="margin-bottom: 1rem;">Global VPC</h3>
+                <p>Global network infrastructure with ultra low-latency connections. Build secure, isolated virtual
+                    networks that span the globe in seconds.</p>
+            </div>
+
+            <div class="elite-card fade-in service-card-loadbalancing" style="transition-delay: 0.4s;">
+                <div class="service-icon"
+                    style="font-size: 3rem; margin-bottom: 1.5rem; background: var(--gradient-secondary); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                    ⚖️</div>
+                <h3 style="margin-bottom: 1rem;">Load Balancing</h3>
+                <p>Distribute traffic intelligently across your infrastructure. Ensure high availability and optimal
+                    performance with our Layer 7 load balancers.</p>
+            </div>
+
+            <div class="elite-card fade-in service-card-autoscaling" style="transition-delay: 0.5s;">
+                <div class="service-icon"
+                    style="font-size: 3rem; margin-bottom: 1.5rem; background: var(--gradient-primary); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                    📈</div>
+                <h3 style="margin-bottom: 1rem;">Auto-Scaling</h3>
+                <p>Automatically adjust resources based on real-time demand. Pay only for what you use with intelligent
+                    scaling that predicts traffic spikes.</p>
+            </div>
+
+            <div class="elite-card fade-in service-card-dr" style="transition-delay: 0.6s;">
+                <div class="service-icon"
+                    style="font-size: 3rem; margin-bottom: 1.5rem; background: var(--gradient-secondary); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                    🔄</div>
+                <h3 style="margin-bottom: 1rem;">Disaster Recovery</h3>
+                <p>Comprehensive backup and recovery solutions. Protect your business with automated failover systems
+                    that ensure business continuity.</p>
+            </div>
+        </div>
+
+        <!-- NEW SECTION: Process Flow -->
+        <div class="section-container" style="max-width: 1400px; margin: 8rem auto 0; padding: 0 2rem;">
+            <div class="section-header fade-in" style="margin-bottom: 4rem;">
+                <h2 class="section-title">How It <span class="glow-text">Works</span></h2>
+                <p class="section-subtitle">Simplified deployment for complex infrastructure.</p>
+            </div>
+
+            <div class="process-flow-container"
+                style="position: relative; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; margin-top: 4rem;">
+                <!-- Connecting Line -->
+                <div class="process-line-bg"
+                    style="position: absolute; top: 40px; left: 0; width: 100%; height: 2px; background: rgba(255,255,255,0.1); z-index: 0;">
+                </div>
+                <div class="process-line-fill"
+                    style="position: absolute; top: 40px; left: 0; width: 0%; height: 2px; background: var(--gradient-primary); z-index: 0; animation: line-fill 2s ease-out forwards 0.5s;">
+                </div>
+
+                <!-- Step 1 -->
+                <div class="process-step elite-card fade-in"
+                    style="flex: 1; text-align: center; position: relative; z-index: 1; border: 1px solid var(--glass-border); padding: 2rem; background: var(--glass-bg); transition-delay: 0.1s;">
+                    <div class="step-circle"
+                        style="width: 80px; height: 80px; margin: 0 auto 1.5rem; background: var(--bg-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; border: 2px solid var(--color-primary); box-shadow: 0 0 20px rgba(59,130,246,0.3);">
+                        🔌
+                    </div>
+                    <div
+                        style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--color-primary); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">
+                        STEP 01</div>
+                    <h3 style="margin-bottom: 0.75rem;">Connect</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary);">
+                        Link your GitHub repo or upload your container image directly to our CLI.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-step elite-card fade-in"
+                    style="flex: 1; text-align: center; position: relative; z-index: 1; border: 1px solid var(--glass-border); padding: 2rem; background: var(--glass-bg); transition-delay: 0.5s;">
+                    <div class="step-circle"
+                        style="width: 80px; height: 80px; margin: 0 auto 1.5rem; background: var(--bg-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; border: 2px solid var(--color-secondary); box-shadow: 0 0 20px rgba(0,212,255,0.3);">
+                        ⚙️
+                    </div>
+                    <div
+                        style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--color-secondary); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">
+                        STEP 02</div>
+                    <h3 style="margin-bottom: 0.75rem;">Configure</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary);">
+                        Set your resource limits, regions, and environmental variables in one click.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-step elite-card fade-in"
+                    style="flex: 1; text-align: center; position: relative; z-index: 1; border: 1px solid var(--glass-border); padding: 2rem; background: var(--glass-bg); transition-delay: 0.9s;">
+                    <div class="step-circle"
+                        style="width: 80px; height: 80px; margin: 0 auto 1.5rem; background: var(--bg-secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; border: 2px solid var(--color-success); box-shadow: 0 0 20px rgba(16,185,129,0.3);">
+                        🚀
+                    </div>
+                    <div
+                        style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--color-success); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">
+                        STEP 03</div>
+                    <h3 style="margin-bottom: 0.75rem;">Deploy</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary);">
+                        Our global orchestrator pushes your app to 25+ edge locations instantly.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEW SECTION: Tech Stack Marquee -->
+        <div class="section-container"
+            style="margin: 8rem 0; background: var(--glass-bg); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); padding: 3rem 0;">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h4 style="text-transform: uppercase; letter-spacing: 0.2rem; font-size: 0.9rem; opacity: 0.7;">
+                    Supported Technologies</h4>
+            </div>
+            <div class="tech-marquee-container">
+                <div class="tech-marquee">
+                    <div class="tech-chip" style="--brand-color: #0db7ed;">
+                        <i class="devicon-docker-plain colored"></i>
+                        <span>Docker</span>
+                    </div>
+                    <div class="tech-chip" style="--brand-color: #326ce5;">
+                        <i class="devicon-kubernetes-plain colored"></i>
+                        <span>Kubernetes</span>
+                    </div>
+                    <div class="tech-chip" style="--brand-color: #339933;">
+                        <i class="devicon-nodejs-plain colored"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tech-chip" style="--brand-color: #3776ab;">
+                        <i class="devicon-python-plain colored"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="tech-chip" style="--brand-color: #00add8;">
+                        <i class="devicon-go-plain colored"></i>
+                        <span>Go</span>
+                    </div>
+                    <div class="tech-chip" style="--brand-color: #000000;">
+                        <i class="devicon-rust-plain" style="color: white;"></i>
+                        <span>Rust</span>
+                    </div>
+                    <div class="tech-chip" style="--brand-color: #61dafb;">
+                        <i class="devicon-react-original colored"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="tech-chip" style="--brand-color: #dc382d;">
+                        <i class="devicon-redis-plain colored"></i>
+                        <span>Redis</span>
+                    </div>
+                    <div class="tech-chip" style="--brand-color: #336791;">
+                        <i class="devicon-postgresql-plain colored"></i>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="tech-chip" style="--brand-color: #47a248;">
+                        <i class="devicon-mongodb-plain colored"></i>
+                        <span>MongoDB</span>
+                    </div>
+                    <!-- Duplicate for infinite loop -->
+                    <div class="tech-chip" style="--brand-color: #0db7ed;">
+                        <i class="devicon-docker-plain colored"></i>
+                        <span>Docker</span>
+                    </div>
+                    <div class="tech-chip" style="--brand-color: #326ce5;">
+                        <i class="devicon-kubernetes-plain colored"></i>
+                        <span>Kubernetes</span>
+                    </div>
+                    <div class="tech-chip" style="--brand-color: #339933;">
+                        <i class="devicon-nodejs-plain colored"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tech-chip" style="--brand-color: #3776ab;">
+                        <i class="devicon-python-plain colored"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="tech-chip" style="--brand-color: #00add8;">
+                        <i class="devicon-go-plain colored"></i>
+                        <span>Go</span>
+                    </div>
+                    <div class="tech-chip" style="--brand-color: #000000;">
+                        <i class="devicon-rust-plain" style="color: white;"></i>
+                        <span>Rust</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEW SECTION: Deep Dive Use Cases -->
+        <div class="section-container" style="max-width: 1400px; margin: 0 auto 8rem; padding: 0 2rem;">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Built for <span class="glow-text">Builders</span></h2>
+            </div>
+
+            <!-- Use Case 01: AI -->
+            <div class="feature-alt-section fade-in"
+                style="display: flex; align-items: center; gap: 4rem; margin-bottom: 6rem; flex-wrap: wrap;">
+                <div class="feature-alt-content" style="flex: 1;">
+                    <div
+                        style="color: var(--color-accent); font-weight: 700; letter-spacing: 0.1em; margin-bottom: 1rem; text-transform: uppercase;">
+                        Use Case 01
+                    </div>
+                    <h3
+                        style="font-size: 2.5rem; margin-bottom: 1.5rem; background: var(--gradient-primary); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                        AI & Machine Learning
+                    </h3>
+                    <p style="font-size: 1.15rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.8;">
+                        Train and deploy models on our high-performance GPU instances. With direct RDMA access and
+                        optimized CUDA drivers, you get bare-metal performance with cloud flexibility.
+                    </p>
+                    <ul style="list-style: none; display: grid; gap: 1rem;">
+                        <li style="display: flex; gap: 1rem; align-items: center; font-size: 1.05rem;">
+                            <span style="color: var(--color-success); font-weight: bold;">✓</span> NVIDIA A100 & H100
+                            Availability
+                        </li>
+                        <li style="display: flex; gap: 1rem; align-items: center; font-size: 1.05rem;">
+                            <span style="color: var(--color-success); font-weight: bold;">✓</span> Pre-configured
+                            PyTorch Images
+                        </li>
+                        <li style="display: flex; gap: 1rem; align-items: center; font-size: 1.05rem;">
+                            <span style="color: var(--color-success); font-weight: bold;">✓</span> Petabyte-scale Object
+                            Storage
+                        </li>
+                    </ul>
+                </div>
+                <!-- Holographic Visual -->
+                <div class="feature-alt-img elite-card holo-card"
+                    style="flex: 1; padding: 0; height: 400px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                    <div class="holo-gradient"
+                        style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.2), transparent 70%);">
+                    </div>
+                    <div class="holo-icon"
+                        style="font-size: 8rem; position: relative; z-index: 2; animation: float 6s ease-in-out infinite;">
+                        🧠</div>
+                    <div class="holo-particles"></div>
+                </div>
+            </div>
+
+            <!-- Use Case 02: FinTech -->
+            <div class="feature-alt-section fade-in"
+                style="display: flex; align-items: center; gap: 4rem; flex-wrap: wrap; flex-direction: row-reverse;">
+                <div class="feature-alt-content" style="flex: 1;">
+                    <div
+                        style="color: var(--color-secondary); font-weight: 700; letter-spacing: 0.1em; margin-bottom: 1rem; text-transform: uppercase;">
+                        Use Case 02
+                    </div>
+                    <h3
+                        style="font-size: 2.5rem; margin-bottom: 1.5rem; background: var(--gradient-secondary); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                        High-Frequency Trading
+                    </h3>
+                    <p style="font-size: 1.15rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.8;">
+                        Milliseconds matter. Co-locate your services in our premium data centers with direct fiber
+                        links to major exchanges. Ultra-low latency guaranteed.
+                    </p>
+                    <ul style="list-style: none; display: grid; gap: 1rem;">
+                        <li style="display: flex; gap: 1rem; align-items: center; font-size: 1.05rem;">
+                            <span style="color: var(--color-secondary); font-weight: bold;">✓</span> &lt;1ms Latency
+                            Guarantee
+                        </li>
+                        <li style="display: flex; gap: 1rem; align-items: center; font-size: 1.05rem;">
+                            <span style="color: var(--color-secondary); font-weight: bold;">✓</span> FPGA Acceleration
+                            Support
+                        </li>
+                        <li style="display: flex; gap: 1rem; align-items: center; font-size: 1.05rem;">
+                            <span style="color: var(--color-secondary); font-weight: bold;">✓</span> Institutional-Grade
+                            Security
+                        </li>
+                    </ul>
+                </div>
+                <!-- Holographic Visual -->
+                <div class="feature-alt-img elite-card holo-card"
+                    style="flex: 1; padding: 0; height: 400px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                    <div class="holo-gradient"
+                        style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.2), transparent 70%);">
+                    </div>
+                    <div class="holo-icon"
+                        style="font-size: 8rem; position: relative; z-index: 2; animation: float 6s ease-in-out infinite 1s;">
+                        📊</div>
+                    <div class="holo-particles"></div>
+                </div>
+            </div>
+
+            <!-- Use Case 03: Gaming -->
+            <div class="feature-alt-section fade-in"
+                style="display: flex; align-items: center; gap: 4rem; margin-bottom: 6rem; flex-wrap: wrap; margin-top: 6rem;">
+                <div class="feature-alt-content" style="flex: 1;">
+                    <div
+                        style="color: #f72585; font-weight: 700; letter-spacing: 0.1em; margin-bottom: 1rem; text-transform: uppercase;">
+                        Use Case 03
+                    </div>
+                    <h3
+                        style="font-size: 2.5rem; margin-bottom: 1.5rem; background: linear-gradient(135deg, #f72585 0%, #7209b7 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                        Gaming & Metaverse
+                    </h3>
+                    <p style="font-size: 1.15rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.8;">
+                        Host persistent worlds with infinite scalability. Our edge computing network ensures lag-free
+                        multiplayer experiences for players globally.
+                    </p>
+                    <ul style="list-style: none; display: grid; gap: 1rem;">
+                        <li style="display: flex; gap: 1rem; align-items: center; font-size: 1.05rem;">
+                            <span style="color: #f72585; font-weight: bold;">✓</span> Global Edge Distribution
+                        </li>
+                        <li style="display: flex; gap: 1rem; align-items: center; font-size: 1.05rem;">
+                            <span style="color: #f72585; font-weight: bold;">✓</span> UDP Acceleration
+                        </li>
+                        <li style="display: flex; gap: 1rem; align-items: center; font-size: 1.05rem;">
+                            <span style="color: #f72585; font-weight: bold;">✓</span> DDoS Protection included
+                        </li>
+                    </ul>
+                </div>
+                <!-- Holographic Visual -->
+                <div class="feature-alt-img elite-card holo-card"
+                    style="flex: 1; padding: 0; height: 400px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                    <div class="holo-gradient"
+                        style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, rgba(247, 37, 133, 0.2), transparent 70%);">
+                    </div>
+                    <div class="holo-icon"
+                        style="font-size: 8rem; position: relative; z-index: 2; animation: float 6s ease-in-out infinite 0.5s;">
+                        🎮</div>
+                    <div class="holo-particles"></div>
+                </div>
+            </div>
+
+            <!-- Use Case 04: Scientific Computing -->
+            <div class="feature-alt-section fade-in"
+                style="display: flex; align-items: center; gap: 4rem; flex-wrap: wrap; flex-direction: row-reverse;">
+                <div class="feature-alt-content" style="flex: 1;">
+                    <div
+                        style="color: #4cc9f0; font-weight: 700; letter-spacing: 0.1em; margin-bottom: 1rem; text-transform: uppercase;">
+                        Use Case 04
+                    </div>
+                    <h3
+                        style="font-size: 2.5rem; margin-bottom: 1.5rem; background: linear-gradient(135deg, #4cc9f0 0%, #4361ee 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                        Scientific Computing
+                    </h3>
+                    <p style="font-size: 1.15rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.8;">
+                        Accelerate genomics, weather modeling, and physics simulations with our HPC clusters. Batch
+                        processing made simple and cost-effective.
+                    </p>
+                    <ul style="list-style: none; display: grid; gap: 1rem;">
+                        <li style="display: flex; gap: 1rem; align-items: center; font-size: 1.05rem;">
+                            <span style="color: #4cc9f0; font-weight: bold;">✓</span> 100Gbps Interconnects
+                        </li>
+                        <li style="display: flex; gap: 1rem; align-items: center; font-size: 1.05rem;">
+                            <span style="color: #4cc9f0; font-weight: bold;">✓</span> Spot Instances for >90% Savings
+                        </li>
+                        <li style="display: flex; gap: 1rem; align-items: center; font-size: 1.05rem;">
+                            <span style="color: #4cc9f0; font-weight: bold;">✓</span> Docker & Singularity Support
+                        </li>
+                    </ul>
+                </div>
+                <!-- Holographic Visual -->
+                <div class="feature-alt-img elite-card holo-card"
+                    style="flex: 1; padding: 0; height: 400px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                    <div class="holo-gradient"
+                        style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, rgba(76, 201, 240, 0.2), transparent 70%);">
+                    </div>
+                    <div class="holo-icon"
+                        style="font-size: 8rem; position: relative; z-index: 2; animation: float 6s ease-in-out infinite 1.5s;">
+                        🧬</div>
+                    <div class="holo-particles"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Cloud Nexus</h4>
+                <p>Enterprise-grade cloud infrastructure built for scale, security, and reliability.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                    <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                    <a href="#" class="social-link" aria-label="GitHub">💻</a>
+                    <a href="#" class="social-link" aria-label="YouTube">📺</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Products</h4>
+                <a href="services.html">Compute</a>
+                <a href="services.html">Storage</a>
+                <a href="services.html">Networking</a>
+                <a href="services.html">Load Balancing</a>
+                <a href="services.html">Auto-Scaling</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Company</h4>
+                <a href="#about">About Us</a>
+                <a href="#careers">Careers</a>
+                <a href="#blog">Blog</a>
+                <a href="#press">Press</a>
+                <a href="#partners">Partners</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Security & Compliance</h4>
+                <a href="#security">Security Overview</a>
+                <a href="#compliance">Compliance</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#sla">SLA</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Support</h4>
+                <a href="#docs">Documentation</a>
+                <a href="#api">API Reference</a>
+                <a href="#support">Support Center</a>
+                <a href="#status">System Status</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Cloud Nexus IaaS. All rights reserved. Built with enterprise excellence.</p>
+        </div>
+    </footer>
+
+    <!-- Authentication Modal Overlay -->
+    <div class="auth-overlay" id="auth-overlay">
+        <div class="auth-modal">
+            <!-- Left Side: Cloud Visuals -->
+            <div class="auth-visual-side">
+                <div class="auth-visual-content">
+                    <div class="auth-visual-logo">
+                        <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5BA4FC"
+                            stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M25 65 H75 C85 65 92 58 92 48 C92 38 85 31 75 31 C73 31 71 31.5 69 32.5 C65 20 54 12 42 12 C28 12 16 22 16 35 C16 36 16.2 37.5 16.5 39 C9 41 4 48 4 56 C4 64 10 70 18 70 H25" />
+                        </svg>
+                        <span class="logo-text">Cloud<span class="glow-text">Nexus</span></span>
+                    </div>
+
+                    <div class="auth-visual-features">
+                        <div class="auth-feature-pill">
+                            <div class="icon">⚡</div>
+                            <div>
+                                <h4>99.99% Uptime</h4>
+                                <p>Enterprise-grade reliability guaranteed.</p>
+                            </div>
+                        </div>
+                        <div class="auth-feature-pill">
+                            <div class="icon">🌍</div>
+                            <div>
+                                <h4>Global Network</h4>
+                                <p>Access 25+ regions instantly.</p>
+                            </div>
+                        </div>
+                        <div class="auth-feature-pill">
+                            <div class="icon">🔐</div>
+                            <div>
+                                <h4>Quantum-Safe</h4>
+                                <p>Next-gen encryption standard.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Forms -->
+            <div class="auth-form-side">
+                <button class="auth-close" aria-label="Close modal">&times;</button>
+                <div class="auth-tabs">
+                    <div class="auth-tab active" data-view="login">Log In</div>
+                    <div class="auth-tab" data-view="register">Sign Up</div>
+                </div>
+
+                <!-- Login Form -->
+                <form class="auth-form active" id="login-form">
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="admin@enterprise.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="auth-submit">Access Console</button>
+                    <div class="auth-footer">
+                        Don't have an account? <a href="#" id="trigger-register">Create account</a>
+                    </div>
+                </form>
+
+                <!-- Register Form -->
+                <form class="auth-form" id="register-form">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Work Email</label>
+                        <input type="email" placeholder="name@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Create Password</label>
+                        <input type="password" placeholder="Min. 8 characters" required>
+                    </div>
+                    <button type="submit" class="auth-submit">Start Free Trial</button>
+                    <div class="auth-footer">
+                        Already using Cloud Nexus? <a href="#" id="trigger-login">Log In</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         JAVASCRIPT FILES
+         ============================================ -->
+    <script src="js/theme.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/counters.js"></script>
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>

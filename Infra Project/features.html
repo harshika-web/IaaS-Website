@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Why Choose Cloud Nexus - Enterprise features including high availability, 99.99% uptime, security, cost optimization, and global scalability">
+    <title>Features - Cloud Nexus IaaS</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="bg-animation-container">
+        <div id="neural-canvas"></div>
+        <div class="bg-orb orb-1"></div>
+        <div class="bg-orb orb-2"></div>
+        <div class="bg-orb orb-3"></div>
+    </div>
+
+    <!-- ============================================
+         NAVIGATION BAR
+         ============================================ -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5BA4FC"
+                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M25 65 H75 C85 65 92 58 92 48 C92 38 85 31 75 31 C73 31 71 31.5 69 32.5 C65 20 54 12 42 12 C28 12 16 22 16 35 C16 36 16.2 37.5 16.5 39 C9 41 4 48 4 56 C4 64 10 70 18 70 H25" />
+                        <line x1="38" y1="70" x2="38" y2="45" opacity="0.8" />
+                        <line x1="50" y1="70" x2="50" y2="35" />
+                        <line x1="62" y1="70" x2="62" y2="45" opacity="0.8" />
+                        <circle cx="38" cy="45" r="3" fill="#5BA4FC" stroke="none" />
+                        <circle cx="50" cy="35" r="3" fill="#5BA4FC" stroke="none" />
+                        <circle cx="62" cy="45" r="3" fill="#5BA4FC" stroke="none" />
+                    </svg>
+                </div>
+                <div class="logo-text-wrapper">
+                    <span class="logo-main">Cloud Nexus</span>
+                    <span class="logo-sub">Enterprise</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="architecture.html">Architecture</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="stats.html">Stats</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <span class="theme-icon" id="theme-icon">🌙</span>
+                <span id="theme-text">Dark</span>
+            </button>
+            <div class="nav-auth">
+                <a href="#" class="btn-auth btn-login">Log In</a>
+                <a href="#" class="btn-auth btn-register">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         WHY CHOOSE US SECTION
+         ============================================ -->
+    <section class="section" id="features" style="padding-top: 140px; position: relative;">
+        <!-- Background Elements -->
+        <div class="mesh-blob mesh-blob-1" style="top: 30%; right: -5%; opacity: 0.3;"></div>
+
+        <div class="section-header fade-in">
+            <h2 class="section-title">Why Choose <span class="glow-text">Cloud Nexus</span></h2>
+            <p class="section-subtitle">
+                Enterprise features that set us apart from the competition, engineered for the most demanding workloads.
+            </p>
+        </div>
+
+        <div class="features-grid-bento">
+            <!-- Feature 1: High Availability (Large) -->
+            <div class="feature-item card-large fade-in">
+                <div class="feature-icon-wrapper">
+                    <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        <animateTransform attributeName="transform" type="translate" values="0 0; 0 -2; 0 0" dur="3s"
+                            repeatCount="indefinite" />
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.75rem;">High Availability</h3>
+                <p>Multi-region redundancy ensures your services stay online. We automatically replicate your data
+                    across multiple availability zones to eliminate single points of failure and ensure near-zero
+                    downtime.</p>
+                <div
+                    style="margin-top: auto; padding-top: 1.5rem; display: flex; gap: 1rem; opacity: 0.6; font-size: 0.9rem;">
+                    <span>⚡ Multi-Zone Sync</span>
+                    <span>🔄 Auto-Failover</span>
+                </div>
+            </div>
+
+            <!-- Feature 2: Uptime (Small) -->
+            <div class="feature-item card-small fade-in" style="text-align: center; align-items: center;">
+                <div class="feature-icon-wrapper">
+                    <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                        <path
+                            d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83">
+                        </path>
+                        <animate attributeName="stroke-opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+                    </svg>
+                </div>
+                <h4>99.99% Uptime</h4>
+                <p style="font-size: 0.95rem;">Rigorous SLA backed by our distributed edge network.</p>
+            </div>
+
+            <!-- Feature 3: Security (Vertical) -->
+            <div class="feature-item card-vertical fade-in">
+                <div class="feature-icon-wrapper"
+                    style="background: rgba(139, 92, 246, 0.1); color: var(--color-accent);">
+                    <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <animate attributeName="stroke-width" values="2;3;2" dur="3s" repeatCount="indefinite" />
+                    </svg>
+                </div>
+                <h3>Enterprise Security</h3>
+                <p>Bank-level AES-256 encryption, SOC2 Type II compliance, and automated DDoS mitigation are built into
+                    every layer of our stack.</p>
+                <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                    <div
+                        style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--color-accent);">
+                        <span style="width: 6px; height: 6px; background: currentColor; border-radius: 50%;"></span>
+                        ISO 27001 Certified
+                    </div>
+                    <div
+                        style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--color-accent);">
+                        <span style="width: 6px; height: 6px; background: currentColor; border-radius: 50%;"></span>
+                        GDPR & HIPAA Compliant
+                    </div>
+                    <div
+                        style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--color-accent);">
+                        <span style="width: 6px; height: 6px; background: currentColor; border-radius: 50%;"></span>
+                        End-to-End Encryption
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: Cost Optimization (Medium) -->
+            <div class="feature-item card-medium fade-in">
+                <div class="feature-icon-wrapper"
+                    style="background: rgba(16, 185, 129, 0.1); color: var(--color-success);">
+                    <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="4s"
+                            repeatCount="indefinite" />
+                    </svg>
+                </div>
+                <h4>Cost Optimization</h4>
+                <p>Advanced resource scheduling algorithms help you reduce infrastructure spend by up to 40%.</p>
+            </div>
+
+            <!-- Feature 5: Global Scale (Medium) -->
+            <div class="feature-item card-medium fade-in">
+                <div class="feature-icon-wrapper"
+                    style="background: rgba(0, 212, 255, 0.1); color: var(--color-secondary);">
+                    <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                        <path d="M2 12h20"></path>
+                        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12"
+                            dur="20s" repeatCount="indefinite" />
+                    </svg>
+                </div>
+                <h4>Global Scale</h4>
+                <p>Deploy workloads to 25+ global regions instantly with our unified control plane.</p>
+            </div>
+
+            <!-- Feature 6: Edge Computing (Medium) -->
+            <div class="feature-item card-medium fade-in">
+                <div class="feature-icon-wrapper" style="background: rgba(45, 212, 191, 0.1); color: #2dd4bf;">
+                    <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5"></path>
+                        <path d="M2 12l10 5 10-5"></path>
+                        <circle cx="12" cy="12" r="2" fill="currentColor">
+                            <animate attributeName="r" values="2;4;2" dur="1.5s" repeatCount="indefinite" />
+                        </circle>
+                    </svg>
+                </div>
+                <h4>Edge Computing</h4>
+                <p>Execute sub-millisecond logic closer to your users with our distributed Edge Worker nodes.</p>
+            </div>
+
+            <!-- Feature 7: Developer SDKs (Medium) -->
+            <div class="feature-item card-medium fade-in">
+                <div class="feature-icon-wrapper" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
+                    <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                        <line x1="14" y1="4" x2="10" y2="20"></line>
+                        <animate attributeName="stroke-dasharray" values="0,50; 50,0; 0,50" dur="4s"
+                            repeatCount="indefinite" />
+                    </svg>
+                </div>
+                <h4>Developer SDKs</h4>
+                <p>Powerful SDKs for Python, Go, and Rust to programmatically manage your entire cloud stack.</p>
+            </div>
+        </div>
+
+        <!-- Responsive Helper for Bento Grid -->
+        <style>
+            @media (max-width: 900px) {
+                .features-grid-bento {
+                    display: flex !important;
+                    flex-direction: column;
+                }
+
+                .feature-item {
+                    grid-column: auto !important;
+                    grid-row: auto !important;
+                }
+            }
+        </style>
+
+        <!-- NEW SECTION: Deep Dive Features (Intelligent Mesh) -->
+        <div class="section-container" style="max-width: 1400px; margin: 8rem auto; padding: 0 2rem;">
+            <div class="feature-alt-section fade-in"
+                style="display: flex; align-items: center; gap: 4rem; flex-wrap: wrap;">
+                <div class="feature-alt-img elite-card"
+                    style="flex: 1.2; padding: 0; height: 500px; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at center, #1e1b4b, #030712); position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.05);">
+
+                    <!-- Advanced SVG Mesh Visualization -->
+                    <svg viewBox="0 0 400 300" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"
+                        style="filter: drop-shadow(0 0 20px rgba(59,130,246,0.3));">
+                        <!-- Connecting Lines (Static Backing) -->
+                        <g stroke="rgba(59,130,246,0.1)" stroke-width="1">
+                            <line x1="200" y1="150" x2="80" y2="80" />
+                            <line x1="200" y1="150" x2="320" y2="80" />
+                            <line x1="200" y1="150" x2="80" y2="220" />
+                            <line x1="200" y1="150" x2="320" y2="220" />
+                            <line x1="80" y1="80" x2="320" y2="80" />
+                            <line x1="80" y1="220" x2="320" y2="220" />
+                        </g>
+
+                        <!-- Pulse Paths (Active) -->
+                        <g fill="none" stroke="var(--color-primary)" stroke-width="1.5" stroke-dasharray="4,12"
+                            opacity="0.4">
+                            <path d="M200 150 L80 80">
+                                <animate attributeName="stroke-dashoffset" from="16" to="0" dur="2s"
+                                    repeatCount="indefinite" />
+                            </path>
+                            <path d="M200 150 L320 80">
+                                <animate attributeName="stroke-dashoffset" from="16" to="0" dur="2.5s"
+                                    repeatCount="indefinite" />
+                            </path>
+                            <path d="M200 150 L80 220">
+                                <animate attributeName="stroke-dashoffset" from="16" to="0" dur="1.8s"
+                                    repeatCount="indefinite" />
+                            </path>
+                            <path d="M200 150 L320 220">
+                                <animate attributeName="stroke-dashoffset" from="16" to="0" dur="2.2s"
+                                    repeatCount="indefinite" />
+                            </path>
+                        </g>
+
+                        <!-- Moving Packets (Data) -->
+                        <circle r="3" fill="#60a5fa">
+                            <animateMotion path="M200 150 L80 80" dur="3s" repeatCount="indefinite" />
+                            <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite" />
+                        </circle>
+                        <circle r="3" fill="#34d399">
+                            <animateMotion path="M200 150 L320 220" dur="2.5s" repeatCount="indefinite" />
+                            <animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite" />
+                        </circle>
+                        <circle r="2" fill="#fbbf24">
+                            <animateMotion path="M80 80 L320 80" dur="4s" repeatCount="indefinite" />
+                            <animate attributeName="opacity" values="0;0.8;0" dur="4s" repeatCount="indefinite" />
+                        </circle>
+
+                        <!-- Mesh Nodes -->
+                        <g>
+                            <!-- Center Node -->
+                            <circle cx="200" cy="150" r="10" fill="var(--color-primary)">
+                                <animate attributeName="r" values="10;12;10" dur="2s" repeatCount="indefinite" />
+                                <animate attributeName="fill-opacity" values="1;0.7;1" dur="2s"
+                                    repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="200" cy="150" r="20" fill="none" stroke="var(--color-primary)" stroke-width="1"
+                                opacity="0.3">
+                                <animate attributeName="r" values="20;35;20" dur="2s" repeatCount="indefinite" />
+                                <animate attributeName="opacity" values="0.3;0;0.3" dur="2s" repeatCount="indefinite" />
+                            </circle>
+
+                            <!-- Outer Nodes -->
+                            <circle cx="80" cy="80" r="6" fill="var(--color-secondary)" />
+                            <circle cx="320" cy="80" r="6" fill="var(--color-secondary)" />
+                            <circle cx="80" cy="220" r="6" fill="var(--color-secondary)" />
+                            <circle cx="320" cy="220" r="6" fill="var(--color-secondary)" />
+                        </g>
+                    </svg>
+
+                    <!-- Background Grid Pattern -->
+                    <div
+                        style="position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 30px 30px; pointer-events: none;">
+                    </div>
+                </div>
+
+                <div class="feature-alt-content" style="flex: 1;">
+                    <div
+                        style="color: var(--color-primary); font-weight: 700; letter-spacing: 0.2rem; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="width: 20px; height: 1px; background: currentColor;"></span>
+                        Global Infrastructure
+                    </div>
+                    <h3 style="font-size: 3rem; margin-bottom: 1.5rem; letter-spacing: -0.02em;">Intelligent <span
+                            class="glow-text">Mesh</span> Network</h3>
+                    <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.7;">
+                        Traditional routing finds the shortest path. Our Intelligent Mesh finds the <em
+                            style="color: var(--color-primary); font-style: normal; font-weight: 700; border-bottom: 2px solid rgba(59,130,246,0.3);">fastest</em>
+                        path.
+                    </p>
+                    <p
+                        style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.7; opacity: 0.8;">
+                        By analyzing real-time congestion across 400+ PoPs, we route your packets around outages and
+                        bottlenecks before they even happen.
+                    </p>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <div style="color: var(--color-primary); font-size: 1.5rem;">⚡</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.3rem;">30ms Latency</h4>
+                                <p style="font-size: 0.9rem; opacity: 0.7;">Global average response time.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <div style="color: var(--color-primary); font-size: 1.5rem;">🛡️</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.3rem;">DDoS Shield</h4>
+                                <p style="font-size: 0.9rem; opacity: 0.7;">Edgeside mitigation by default.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEW SECTION: Autonomous Fault Tolerance -->
+        <div class="section-container" style="max-width: 1400px; margin: 8rem auto; padding: 0 2rem;">
+            <div class="feature-alt-section fade-in"
+                style="display: flex; align-items: center; gap: 4rem; flex-wrap: wrap; flex-direction: row-reverse;">
+                <div class="feature-alt-img elite-card"
+                    style="flex: 1.2; padding: 0; height: 500px; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at center, #064e3b, #020617); position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.05);">
+
+                    <!-- SVG Fault Tolerance Visualization -->
+                    <svg viewBox="0 0 400 300" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                        <!-- Server Nodes -->
+                        <rect x="50" y="100" width="80" height="100" rx="4" fill="rgba(255,255,255,0.05)"
+                            stroke="rgba(255,255,255,0.1)" />
+                        <rect x="160" y="100" width="80" height="100" rx="4" fill="rgba(255,255,255,0.05)"
+                            stroke="rgba(255,255,255,0.1)">
+                            <animate id="fail" attributeName="stroke"
+                                values="rgba(255,255,255,0.1);#ef4444;rgba(255,255,255,0.1)" dur="4s"
+                                repeatCount="indefinite" />
+                            <animate attributeName="fill"
+                                values="rgba(255,255,255,0.05);rgba(239, 68, 68, 0.1);rgba(255,255,255,0.05)" dur="4s"
+                                repeatCount="indefinite" />
+                        </rect>
+                        <rect x="270" y="100" width="80" height="100" rx="4" fill="rgba(255,255,255,0.05)"
+                            stroke="rgba(255,255,255,0.1)" />
+
+                        <!-- Incoming Traffic -->
+                        <circle r="4" fill="var(--color-primary)">
+                            <animateMotion id="flow1" path="M200 20 L200 100" dur="1s" fill="freeze"
+                                begin="0;flow3.end" />
+                            <animate attributeName="opacity" values="1;0" begin="fail.begin + 1s" dur="0.2s"
+                                fill="freeze" />
+                        </circle>
+
+                        <!-- Re-routed Traffic -->
+                        <circle r="4" fill="#34d399" opacity="0">
+                            <animate attributeName="opacity" values="0;1" begin="fail.begin + 1.2s" dur="0.2s"
+                                fill="freeze" />
+                            <animateMotion id="flow2" path="M200 20 Q200 60 90 60 L90 100" dur="1.5s"
+                                repeatCount="indefinite" begin="fail.begin + 1.2s" />
+                        </circle>
+                        <circle r="4" fill="#34d399" opacity="0">
+                            <animate attributeName="opacity" values="0;1" begin="fail.begin + 1.2s" dur="0.2s"
+                                fill="freeze" />
+                            <animateMotion id="flow3" path="M200 20 Q200 60 310 60 L310 100" dur="1.5s"
+                                repeatCount="indefinite" begin="fail.begin + 1.2s" />
+                        </circle>
+                    </svg>
+
+                    <div
+                        style="position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.5); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.8rem; color: #ef4444; border: 1px solid #ef4444; display: flex; align-items: center; gap: 0.5rem;">
+                        <span
+                            style="width: 8px; height: 8px; background: #ef4444; border-radius: 50%; animation: pulse 1s infinite;"></span>
+                        Fault Detected: Re-routing Traffic...
+                    </div>
+                </div>
+
+                <div class="feature-alt-content" style="flex: 1;">
+                    <div
+                        style="color: var(--color-success); font-weight: 700; letter-spacing: 0.2rem; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="width: 20px; height: 1px; background: currentColor;"></span>
+                        Self-Healing Stack
+                    </div>
+                    <h3 style="font-size: 3rem; margin-bottom: 1.5rem; letter-spacing: -0.02em;">Autonomous <span
+                            class="glow-text">Fault</span> Tolerance</h3>
+                    <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.7;">
+                        Our infrastructure doesn't just monitor for failures—it <em
+                            style="color: var(--color-success); font-style: normal; font-weight: 700;">anticipates</em>
+                        them.
+                    </p>
+                    <p
+                        style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.7; opacity: 0.8;">
+                        Using machine learning, we identify performance degradation before it impacts your users. In the
+                        event of a hard failure, traffic is re-routed in under 100ms.
+                    </p>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <div style="color: var(--color-success); font-size: 1.5rem;">🔄</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.3rem;">99.999% SLA</h4>
+                                <p style="font-size: 0.9rem; opacity: 0.7;">High-availability guarantee.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <div style="color: var(--color-success); font-size: 1.5rem;">🧠</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.3rem;">AI Healing</h4>
+                                <p style="font-size: 0.9rem; opacity: 0.7;">Predictive maintenance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEW SECTION: Quantum-Safe Encryption -->
+        <div class="section-container" style="max-width: 1400px; margin: 8rem auto; padding: 0 2rem;">
+            <div class="feature-alt-section fade-in"
+                style="display: flex; align-items: center; gap: 4rem; flex-wrap: wrap;">
+                <div class="feature-alt-img elite-card"
+                    style="flex: 1.2; padding: 0; height: 500px; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at center, #4338ca, #020617); position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.05);">
+
+                    <!-- SVG Quantum Encryption Visualization -->
+                    <svg viewBox="0 0 400 300" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                        <!-- Holographic Shield -->
+                        <circle cx="200" cy="150" r="80" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"
+                            stroke-dasharray="10,5">
+                            <animateTransform attributeName="transform" type="rotate" from="0 200 150" to="360 200 150"
+                                dur="10s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="200" cy="150" r="60" fill="rgba(67, 56, 202, 0.1)" stroke="var(--color-secondary)"
+                            stroke-width="1" opacity="0.6">
+                            <animate attributeName="r" values="60;65;60" dur="3s" repeatCount="indefinite" />
+                            <animate attributeName="stroke-opacity" values="0.6;1;0.6" dur="3s"
+                                repeatCount="indefinite" />
+                        </circle>
+
+                        <!-- Data Particles -->
+                        <g>
+                            <circle r="2" fill="white">
+                                <animateMotion path="M-20 150 L140 150" dur="2s" repeatCount="indefinite" />
+                                <animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite"
+                                    keyTimes="0;0.8" />
+                            </circle>
+                            <circle r="3" fill="var(--color-secondary)">
+                                <animateMotion path="M260 150 L420 150" dur="2s" repeatCount="indefinite"
+                                    begin="0.8s" />
+                                <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"
+                                    keyTimes="0;0.2;1" />
+                            </circle>
+                        </g>
+
+                        <!-- Shield Lines -->
+                        <line x1="200" y1="70" x2="200" y2="230" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                        <line x1="120" y1="150" x2="280" y2="150" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                    </svg>
+
+                    <div
+                        style="position: absolute; top: 2rem; right: 2rem; background: rgba(0,0,0,0.3); padding: 0.5rem 1rem; border-radius: 4px; font-family: monospace; font-size: 0.7rem; color: var(--color-secondary); border-left: 2px solid var(--color-secondary);">
+                        ENCRYPTION: KYBER-1024<br>
+                        STATUS: FUTURE-PROOF
+                    </div>
+                </div>
+
+                <div class="feature-alt-content" style="flex: 1;">
+                    <div
+                        style="color: var(--color-secondary); font-weight: 700; letter-spacing: 0.2rem; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="width: 20px; height: 1px; background: currentColor;"></span>
+                        Next-Gen Security
+                    </div>
+                    <h3 style="font-size: 3rem; margin-bottom: 1.5rem; letter-spacing: -0.02em;">Quantum-Safe <span
+                            class="glow-text">Encryption</span></h3>
+                    <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.7;">
+                        Secure your data against the threats of <em
+                            style="color: var(--color-secondary); font-style: normal; font-weight: 700;">tomorrow</em>,
+                        today.
+                    </p>
+                    <p
+                        style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.7; opacity: 0.8;">
+                        We’ve implemented CRYSTALS-Kyber and Dilithium algorithms across our entire global backbone,
+                        ensuring that your data remains private even in a post-quantum world.
+                    </p>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <div style="color: var(--color-secondary); font-size: 1.5rem;">🔐</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.3rem;">PQC Ready</h4>
+                                <p style="font-size: 0.9rem; opacity: 0.7;">Post-Quantum Cryptography.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <div style="color: var(--color-secondary); font-size: 1.5rem;">✨</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.3rem;">mTLS v2</h4>
+                                <p style="font-size: 0.9rem; opacity: 0.7;">Hardware-backed identity.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEW SECTION: Comparison Table (Elite Enhancement) -->
+        <div class="section-container" style="max-width: 1400px; margin: 10rem auto 12rem; padding: 0 2rem;">
+            <div class="section-header fade-in" style="margin-bottom: 5rem;">
+                <h2 class="section-title">The <span class="glow-text">Cloud Nexus</span> Advantage</h2>
+                <p class="section-subtitle">Engineered for performance, priced for predictability, and built for
+                    builders.</p>
+            </div>
+
+            <div class="comparison-ui-wrapper fade-in elite-card"
+                style="padding: 1.5rem; border-radius: 32px; background: var(--glass-bg); border: 1px solid var(--glass-border); position: relative; overflow: hidden; box-shadow: var(--shadow-2xl);">
+                <!-- Ambient Background Glow -->
+                <div
+                    style="position: absolute; top: -150px; left: -150px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(59, 130, 246, 0.08), transparent 70%); pointer-events: none;">
+                </div>
+
+                <div style="overflow-x: auto; width: 100%;">
+                    <table class="elite-comparison-table"
+                        style="width: 100%; border-collapse: separate; border-spacing: 0 0.5rem; min-width: 900px;">
+                        <thead>
+                            <tr style="background: transparent;">
+                                <th
+                                    style="text-align: left; padding: 2.5rem 2rem; color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2rem; font-weight: 700; opacity: 0.6;">
+                                    Feature Matrix</th>
+                                <th
+                                    style="padding: 2.5rem 2rem; text-align: center; background: rgba(59, 130, 246, 0.04); border-radius: 24px 24px 0 0; border: 1px solid rgba(59, 130, 246, 0.1); border-bottom: none;">
+                                    <div
+                                        style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                                        <span
+                                            style="color: var(--color-primary); font-size: 1.6rem; font-weight: 800; letter-spacing: -0.03em; filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.3));">Cloud
+                                            Nexus</span>
+                                        <span
+                                            style="font-size: 0.65rem; color: var(--color-primary); background: rgba(59, 130, 246, 0.15); padding: 0.25rem 0.75rem; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700;">Standard</span>
+                                    </div>
+                                </th>
+                                <th
+                                    style="padding: 2.5rem 2rem; text-align: center; color: var(--text-tertiary); font-weight: 600; opacity: 0.7;">
+                                    Legacy Cloud A</th>
+                                <th
+                                    style="padding: 2.5rem 2rem; text-align: center; color: var(--text-tertiary); font-weight: 600; opacity: 0.7;">
+                                    Legacy Cloud B</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size: 1.05rem;">
+                            <!-- Row 1: Deployment -->
+                            <tr class="comp-row" style="transition: all 0.3s ease;">
+                                <td
+                                    style="padding: 2rem; border-radius: 16px 0 0 16px; font-weight: 600; color: var(--text-secondary);">
+                                    Deployment Speed
+                                    <div
+                                        style="font-size: 0.8rem; font-weight: 400; opacity: 0.5; margin-top: 0.25rem;">
+                                        Seconds vs Minutes</div>
+                                </td>
+                                <td
+                                    style="padding: 2rem; text-align: center; background: rgba(59, 130, 246, 0.04); border-left: 1px solid rgba(59, 130, 246, 0.1); border-right: 1px solid rgba(59, 130, 246, 0.1); color: var(--color-primary); font-weight: 700;">
+                                    <div
+                                        style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                            stroke-width="3" fill="none"
+                                            style="filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.5));">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        ~5 Seconds
+                                    </div>
+                                </td>
+                                <td
+                                    style="padding: 2rem; text-align: center; color: var(--text-tertiary); opacity: 0.6;">
+                                    ~2 Minutes</td>
+                                <td
+                                    style="padding: 2rem; text-align: center; color: var(--text-tertiary); opacity: 0.6; border-radius: 0 16px 16px 0;">
+                                    ~5 Minutes</td>
+                            </tr>
+                            <!-- Row 2: Regions -->
+                            <tr class="comp-row" style="transition: all 0.3s ease;">
+                                <td
+                                    style="padding: 2rem; border-radius: 16px 0 0 16px; font-weight: 600; color: var(--text-secondary);">
+                                    Global Distribution
+                                    <div
+                                        style="font-size: 0.8rem; font-weight: 400; opacity: 0.5; margin-top: 0.25rem;">
+                                        Multi-region availability</div>
+                                </td>
+                                <td
+                                    style="padding: 2rem; text-align: center; background: rgba(59, 130, 246, 0.04); border-left: 1px solid rgba(59, 130, 246, 0.1); border-right: 1px solid rgba(59, 130, 246, 0.1); color: var(--color-primary); font-weight: 700;">
+                                    <div
+                                        style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                            stroke-width="3" fill="none">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        25+ Included
+                                    </div>
+                                </td>
+                                <td
+                                    style="padding: 2rem; text-align: center; color: var(--text-tertiary); opacity: 0.6;">
+                                    Add-on Cost</td>
+                                <td
+                                    style="padding: 2rem; text-align: center; color: var(--text-tertiary); opacity: 0.6; border-radius: 0 16px 16px 0;">
+                                    Premium Option</td>
+                            </tr>
+                            <!-- Row 3: Security -->
+                            <tr class="comp-row" style="transition: all 0.3s ease;">
+                                <td
+                                    style="padding: 2rem; border-radius: 16px 0 0 16px; font-weight: 600; color: var(--text-secondary);">
+                                    Advanced Protection
+                                    <div
+                                        style="font-size: 0.8rem; font-weight: 400; opacity: 0.5; margin-top: 0.25rem;">
+                                        L7 DDoS Mitigaton</div>
+                                </td>
+                                <td
+                                    style="padding: 2rem; text-align: center; background: rgba(59, 130, 246, 0.04); border-left: 1px solid rgba(59, 130, 246, 0.1); border-right: 1px solid rgba(59, 130, 246, 0.1); color: var(--color-primary); font-weight: 700;">
+                                    <div
+                                        style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                            stroke-width="3" fill="none">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Zero-Config
+                                    </div>
+                                </td>
+                                <td
+                                    style="padding: 2rem; text-align: center; color: var(--text-tertiary); font-size: 1.2rem; opacity: 0.3;">
+                                    ✕</td>
+                                <td
+                                    style="padding: 2rem; text-align: center; color: var(--text-tertiary); font-size: 1.2rem; opacity: 0.3; border-radius: 0 16px 16px 0;">
+                                    ✕</td>
+                            </tr>
+                            <!-- Row 4: Pricing -->
+                            <tr class="comp-row" style="transition: all 0.3s ease;">
+                                <td
+                                    style="padding: 2rem; border-radius: 16px 0 0 16px; font-weight: 600; color: var(--text-secondary);">
+                                    Pricing Model
+                                    <div
+                                        style="font-size: 0.8rem; font-weight: 400; opacity: 0.5; margin-top: 0.25rem;">
+                                        Monthly predictability</div>
+                                </td>
+                                <td
+                                    style="padding: 2rem; text-align: center; background: rgba(59, 130, 246, 0.04); border-left: 1px solid rgba(59, 130, 246, 0.1); border-right: 1px solid rgba(59, 130, 246, 0.1); color: var(--color-primary); font-weight: 700;">
+                                    <div
+                                        style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                            stroke-width="3" fill="none">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Flat Rate
+                                    </div>
+                                </td>
+                                <td
+                                    style="padding: 2rem; text-align: center; color: var(--text-tertiary); opacity: 0.6;">
+                                    Variable Fees</td>
+                                <td
+                                    style="padding: 2rem; text-align: center; color: var(--text-tertiary); opacity: 0.6; border-radius: 0 16px 16px 0;">
+                                    Complex Tiers</td>
+                            </tr>
+                            <!-- Row 5: SLA -->
+                            <tr class="comp-row" style="transition: all 0.3s ease;">
+                                <td
+                                    style="padding: 2rem; border-radius: 16px 0 0 16px; border-bottom: none; font-weight: 600; color: var(--text-secondary);">
+                                    Uptime Guarantee
+                                    <div
+                                        style="font-size: 0.8rem; font-weight: 400; opacity: 0.5; margin-top: 0.25rem;">
+                                        Enterprise-grade SLA</div>
+                                </td>
+                                <td
+                                    style="padding: 2rem; text-align: center; background: rgba(59, 130, 246, 0.04); border-left: 1px solid rgba(59, 130, 246, 0.1); border-right: 1px solid rgba(59, 130, 246, 0.1); border-bottom: 1px solid rgba(59, 130, 246, 0.1); border-radius: 0 0 24px 24px; color: var(--color-primary); font-weight: 800; font-size: 1.2rem;">
+                                    99.999%
+                                </td>
+                                <td
+                                    style="padding: 2rem; text-align: center; color: var(--text-tertiary); opacity: 0.6;">
+                                    99.9%</td>
+                                <td
+                                    style="padding: 2rem; text-align: center; color: var(--text-tertiary); opacity: 0.6; border-radius: 0 0 16px 0;">
+                                    99.5%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <style>
+                .comp-row:hover {
+                    background: rgba(255, 255, 255, 0.03);
+                    transform: translateX(10px) scale(1.01);
+                }
+
+                [data-theme="light"] .comp-row:hover {
+                    background: rgba(0, 0, 0, 0.02);
+                }
+
+                .elite-comparison-table {
+                    border-spacing: 0 0.75rem !important;
+                }
+            </style>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Cloud Nexus</h4>
+                <p>Enterprise-grade cloud infrastructure built for scale, security, and reliability.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                    <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                    <a href="#" class="social-link" aria-label="GitHub">💻</a>
+                    <a href="#" class="social-link" aria-label="YouTube">📺</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Products</h4>
+                <a href="services.html">Compute</a>
+                <a href="services.html">Storage</a>
+                <a href="services.html">Networking</a>
+                <a href="services.html">Load Balancing</a>
+                <a href="services.html">Auto-Scaling</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Company</h4>
+                <a href="#about">About Us</a>
+                <a href="#careers">Careers</a>
+                <a href="#blog">Blog</a>
+                <a href="#press">Press</a>
+                <a href="#partners">Partners</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Security & Compliance</h4>
+                <a href="#security">Security Overview</a>
+                <a href="#compliance">Compliance</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#sla">SLA</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Support</h4>
+                <a href="#docs">Documentation</a>
+                <a href="#api">API Reference</a>
+                <a href="#support">Support Center</a>
+                <a href="#status">System Status</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Cloud Nexus IaaS. All rights reserved. Built with enterprise excellence.</p>
+        </div>
+    </footer>
+
+    <!-- Authentication Modal Overlay -->
+    <div class="auth-overlay" id="auth-overlay">
+        <div class="auth-modal">
+            <!-- Left Side: Cloud Visuals -->
+            <div class="auth-visual-side">
+                <div class="auth-visual-content">
+                    <div class="auth-visual-logo">
+                        <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5BA4FC"
+                            stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M25 65 H75 C85 65 92 58 92 48 C92 38 85 31 75 31 C73 31 71 31.5 69 32.5 C65 20 54 12 42 12 C28 12 16 22 16 35 C16 36 16.2 37.5 16.5 39 C9 41 4 48 4 56 C4 64 10 70 18 70 H25" />
+                        </svg>
+                        <span class="logo-text">Cloud<span class="glow-text">Nexus</span></span>
+                    </div>
+
+                    <div class="auth-visual-features">
+                        <div class="auth-feature-pill">
+                            <div class="icon">⚡</div>
+                            <div>
+                                <h4>99.99% Uptime</h4>
+                                <p>Enterprise-grade reliability guaranteed.</p>
+                            </div>
+                        </div>
+                        <div class="auth-feature-pill">
+                            <div class="icon">🌍</div>
+                            <div>
+                                <h4>Global Network</h4>
+                                <p>Access 25+ regions instantly.</p>
+                            </div>
+                        </div>
+                        <div class="auth-feature-pill">
+                            <div class="icon">🔐</div>
+                            <div>
+                                <h4>Quantum-Safe</h4>
+                                <p>Next-gen encryption standard.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Forms -->
+            <div class="auth-form-side">
+                <button class="auth-close" aria-label="Close modal">&times;</button>
+                <div class="auth-tabs">
+                    <div class="auth-tab active" data-view="login">Log In</div>
+                    <div class="auth-tab" data-view="register">Sign Up</div>
+                </div>
+
+                <!-- Login Form -->
+                <form class="auth-form active" id="login-form">
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="admin@enterprise.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="auth-submit">Access Console</button>
+                    <div class="auth-footer">
+                        Don't have an account? <a href="#" id="trigger-register">Create account</a>
+                    </div>
+                </form>
+
+                <!-- Register Form -->
+                <form class="auth-form" id="register-form">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Work Email</label>
+                        <input type="email" placeholder="name@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Create Password</label>
+                        <input type="password" placeholder="Min. 8 characters" required>
+                    </div>
+                    <button type="submit" class="auth-submit">Start Free Trial</button>
+                    <div class="auth-footer">
+                        Already using Cloud Nexus? <a href="#" id="trigger-login">Log In</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         JAVASCRIPT FILES
+         ============================================ -->
+    <script src="js/theme.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/counters.js"></script>
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>
